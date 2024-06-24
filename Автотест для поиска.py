@@ -1,4 +1,4 @@
-# #Автотест для поиска воды
+#Автотест для поиска воды
 
 
 from selenium import webdriver
@@ -11,5 +11,7 @@ driver.get(url)
 search_string = driver.find_element(By.CLASS_NAME,"_input_184dk_25")
 search_string.send_keys("вода")
 sleep(5)
+
+
 
 
