@@ -1,5 +1,5 @@
-#Автотест для поиска воды
-
+#Автотест для поисковой строки сайта https://samokat.ru/ воды
+# На примере поиска "вода"
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -16,12 +16,16 @@ driver.get(url)
 # Находим поле для поиска по классам
 search_string = driver.find_element(By.CLASS_NAME,"_input_184dk_25")
 
-# Вводим  слово"вода" в строку поиска 
+# Вводим слово"вода" в строку поиска 
 search_string.send_keys("вода")
 
-# Ждем несколько секунд для закгрузки результатов поиска
+# Ждем несколько секунд для загрузки результатов поиска
 sleep(5)
 
+# Получаем результаты поиска
+search_results=driver.find_element(By.CLASS_NAME,"_input_184dk_25")
 
+# Закрываем браузер
+driver.quit()
 
 
